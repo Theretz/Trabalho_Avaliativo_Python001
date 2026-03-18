@@ -1,0 +1,36 @@
+digraph Fluxograma_Automação_Pagamento{
+    node [shape=rectangle fontname="Arial"];
+    A[label="Inicío" shape=oval];
+    B[label="Entrada:\nHNOR (Horas normais trabalhadas)" shape=parallelogram width="-1.5" height="0.5"];
+    C[label="Entrada:\nHEX (Horas extras trabalhadas)" shape=parallelogram width="-1.5" height="0.5"];
+    D[label="Entrada: \nHE (Percentual das horas trabalhadas)" shape=parallelogram width="-1.5 "height="0.5"];
+    E[label="Entrada: \nVH (Valor pago por hora)" shape=parallelogram width="-1.5" height="0.5"];
+    F[label="Entrada: \nDes_Percentual (Desconto percentual aplicado sobre o salário bruto)" shape=parallelogram width="-1.5" height="0.5"];
+    G[label="Entrada: \nnome (nome completo do funionário)" shape=parallelogram width="-1.5" height="0.5"];
+    H[label="Entrada: \nCPF (CPF do funcionário)" shape=parallelogram width="-1.5" height="0.5"];
+    I[label="Entrada: \ncargo (cargo do funcionário)" shape=parallelogram width="-1.5" height="0.5"];
+    J[label="Calcular: \nSal_Bruto<-(HNOR + HEX)" shape=rectangle];
+    K[label="Calcular: \nDES<-(Sal_Bruto * (Des_Percentual / 100)"];
+    L[label="Calcular: \nSal_liq<-(Sal_Bruto - DES)"];
+    M[label="Saída: \nNome" shape=note];
+    N[label="Saída: \nCPF" shape=note];
+    O[label="Saída: \nSalário Bruto" shape=note];
+    P[label="Saída: \nDesconto Salárial" shape=note];
+    Q[label="Saída: \nSalário Final" shape=note];
+    A->B;
+    B->C;
+    C->D;
+    D->E;
+    E->F;
+    F->G;
+    G->H;
+    H->I;
+    I->J;
+    J->K;
+    K->L;
+    L->M;
+    M->N;
+    N->O;
+    O->P;
+    P->Q;
+}
