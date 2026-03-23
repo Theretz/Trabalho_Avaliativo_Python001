@@ -14,6 +14,7 @@ DES = Sal_Bruto * (Des_Percentual / 100)
 Sal_liq = Sal_Bruto - DES  
 
 #Output de dados
+print("\nRECIBO DE PAGAMENTO")
 print(f'Nome: {nome}')
 print(f'CPF: {CPF}')
 print(f'Cargo: {cargo}')
